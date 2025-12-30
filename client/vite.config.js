@@ -10,6 +10,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/generate': 'http://127.0.0.1:5000',
+      '/verify': 'http://127.0.0.1:5000',
     }
   }
 })
