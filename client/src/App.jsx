@@ -47,7 +47,7 @@ function App() {
       });
   };
   return (
-    <div className="absolute top-0 m-0 flex h-full w-full flex-col items-center gap-4 bg-[#0d1636]">
+    <div className="absolute top-0 m-0 flex h-full w-full flex-col items-center gap-4 overflow-auto bg-[#0d1636]">
       <h1 className="m-8 text-6xl font-bold text-blue-300">
         Two Truths and a Lie
       </h1>
@@ -73,7 +73,7 @@ function App() {
         ))}
       </div>
       <button
-        className={`/* base style */ /* conditional */ mt-8 flex h-16 w-48 items-center justify-center rounded-sm border-2 border-blue-200 text-3xl transition duration-300 hover:scale-110 active:scale-105 active:opacity-80 ${
+        className={`/* base style */ /* conditional */ mt-8 flex h-16 w-48 items-center justify-center rounded-sm border-2 border-blue-200 p-8 text-3xl transition duration-300 hover:scale-110 active:scale-105 active:opacity-80 ${
           selectedId < 0 || result !== ""
             ? // disable button
               "text-blue-200 opacity-50"
@@ -88,7 +88,7 @@ function App() {
 
       {result && (
         <div
-          className={`/* base style */ /* conditional */ mt-8 rounded-sm border-2 p-8 text-2xl ${
+          className={`/* base style */ /* conditional */ my-8 rounded-sm border-2 p-8 text-2xl ${
             result === "truth"
               ? "border-red-200 text-red-200"
               : "border-green-200 text-green-200"
